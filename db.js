@@ -1,9 +1,10 @@
 const oracle = require("oracledb")
 const camelcase = require("camelcase")
 
-const USER = "CandyEditor"
-const PASSWORD = "candyeditor"
-const CONNECTION = "127.0.0.1:1521/orcl"
+const settings = require("./settings")
+const USER = settings.user
+const PASSWORD = settings.password
+const CONNECTION = settings.connection
 
 let currentConnection = null
 
