@@ -3,7 +3,7 @@ const camelcase = require("camelcase")
 
 const USER = "CandyEditor"
 const PASSWORD = "candyeditor"
-const CONNECTION = "192.168.1.20:1521/orcl"
+const CONNECTION = "127.0.0.1:1521/orcl"
 
 let currentConnection = null
 

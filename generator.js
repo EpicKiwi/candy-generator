@@ -2,15 +2,20 @@ const faker = require("faker")
 const cache = require("./cache")
 const db = require("./db")
 const chalk = require("chalk")
+const fs = require("fs")
 
 let increment = 0
 //let today = new Date(2017,5,1,8,33) // 1er Juin 2017 8h31
-let today = new Date(2017,5,1,20,10)
+//let today = new Date(2017,5,2,22,23)
+let currentDatePath = __dirname+"/current.date"
+let today = new Date()
+today.setTime(fs.readFileSync(currentDatePath,"utf8"))
 let timeStep = 60000
 
 function tickDate(){
     increment = 0
     today.setTime(today.getTime()+timeStep)
+    fs.writeFileSync(currentDatePath,today.getTime())
 }
 
 function getRandomId(){
