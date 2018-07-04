@@ -1,0 +1,22 @@
+{
+  "name": "generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "start-log": "node index.js | tee simulation.log",
+    "start-log-color": "unbuffer node index.js | tee simulation.log"
+  },
+  "author": "EpicKiwi <me@epickiwi.fr>",
+  "license": "MIT",
+  "dependencies": {
+    "camelcase": "^5.0.0",
+    "chalk": "^2.4.1",
+    "faker": "^4.1.0",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "oracledb": "^2.3.0"
+  }
+}
